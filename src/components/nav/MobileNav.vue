@@ -17,9 +17,7 @@
           <v-list-item prepend-icon="mdi-account-circle" title="About Me" to="/about"></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 100vh; width: 100%">
         <slot></slot>
-      </v-main>
 </template>
 <script setup>
 import { ref, watch } from 'vue'

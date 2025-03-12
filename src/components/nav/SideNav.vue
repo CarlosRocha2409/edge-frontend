@@ -1,5 +1,5 @@
 <template>
-      <v-navigation-drawer expand-on-hover rail>
+      <v-navigation-drawer class="nav-drawer" expand-on-hover rail>
         <v-list>
           <v-list-item prepend-avatar="https://xe.network/logo.svg" title="Edge Dashboard"></v-list-item>
         </v-list>
@@ -14,3 +14,15 @@
 
         <slot></slot>
 </template>
+
+<style scoped lang="scss">
+@use '../../styles/mixins' as m;
+.nav-drawer {
+  display: none;
+
+  @include m.query('md') {
+    display: flex;
+  }
+  
+}
+</style>

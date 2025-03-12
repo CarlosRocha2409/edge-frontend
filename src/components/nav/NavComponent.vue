@@ -12,7 +12,7 @@ import MobileNav from './MobileNav.vue'
     </SideNav>
 
     <MobileNav>
-      <v-main style="height: 100vh; width: 100%">
+      <v-main class="container-mb">
         <slot></slot>
       </v-main>
     </MobileNav>
@@ -20,7 +20,28 @@ import MobileNav from './MobileNav.vue'
 </template>
 
 <style scoped lang="scss">
+@use '../../styles/mixins' as m;
+
 .container {
   padding: 5rem;
+  display: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @include m.query('md') {
+    display: flex;
+  }
+}
+
+.container-mb {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding:80px 20px;
+
+  @include m.query('md') {
+    display: none;
+  }
 }
 </style>
