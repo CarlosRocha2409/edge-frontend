@@ -1,10 +1,9 @@
 <template>
-  <v-card class="mobile-nav">
-    <v-layout>
-      <v-app-bar>
+
+      <v-app-bar class="mobile-nav">
         <v-app-bar-nav-icon variant="text" color="white" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-        <v-row class="nav-title" >
+        <v-row class="nav-title">
           <img height="30px" width="30px" src="https://xe.network/logo.svg" alt="Avatar" />
           <v-toolbar-title class="ml-2">Edge Dashboard</v-toolbar-title>
         </v-row>
@@ -18,9 +17,9 @@
           <v-list-item prepend-icon="mdi-account-circle" title="About Me" to="/about"></v-list-item>
         </v-list>
       </v-navigation-drawer>
-
-    </v-layout>
-  </v-card>
+      <v-main style="height: 100vh; width: 100%">
+        <slot></slot>
+      </v-main>
 </template>
 <script setup>
 import { ref, watch } from 'vue'
@@ -39,10 +38,11 @@ watch(group, () => {
   @include m.query('md') {
     display: none;
   }
-  .nav-title{
-    margin-left:15px;
+
+  .nav-title {
+    margin-left: 15px;
     display: flex;
-    align-items:center;
+    align-items: center;
   }
 }
 </style>
