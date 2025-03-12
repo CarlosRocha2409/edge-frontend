@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Dashboard from "../components/dashboard/Dashboard.vue"
+import Dashboard from '../components/dashboard/Dashboard.vue'
 </script>
 <template>
   <main>
@@ -12,6 +12,6 @@ import Dashboard from "../components/dashboard/Dashboard.vue"
 @use '../styles/variables' as v;
 
 main {
-  background-color: v.$darker-blue;
+  background-color: v.$background;
 }
 </style>

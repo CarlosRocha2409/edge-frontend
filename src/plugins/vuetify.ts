@@ -1,4 +1,5 @@
 import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
@@ -25,7 +26,7 @@ const EdgeTheme = {
     'border-color': '#000000',
     'border-opacity': 0.12,
     'high-emphasis-opacity': 0.87,
-    'medium-emphasis-opacity': 0.60,
+    'medium-emphasis-opacity': 0.6,
     'disabled-opacity': 0.38,
     'idle-opacity': 0.04,
     'hover-opacity': 0.04,
@@ -34,21 +35,21 @@ const EdgeTheme = {
     'activated-opacity': 0.12,
     'pressed-opacity': 0.12,
     'dragged-opacity': 0.08,
-  }
+  },
 }
-
 
 const vuetify = createVuetify({
   components,
   directives,
-  theme:{
-    defaultTheme:"EdgeTheme",
-    themes:{
-      EdgeTheme
-    }
-
-  }
+  theme: {
+    defaultTheme: 'EdgeTheme',
+    themes: {
+      EdgeTheme,
+    },
+  },
+  icons: {
+    defaultSet: 'mdi', 
+  },
 })
 
-
-export default vuetify;
+export default vuetify
