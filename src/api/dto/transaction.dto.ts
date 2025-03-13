@@ -1,4 +1,4 @@
-import { IMetadata } from "./metadata.dto";
+import type { IMetadata } from "./metadata.dto";
 
 export interface ITransaction {
     timestamp: number,

@@ -1,3 +1,14 @@
+<script lang="ts" setup>
+import { ref, watch } from 'vue'
+
+const drawer = ref(false)
+const group = ref(null)
+
+watch(group, () => {
+  drawer.value = false
+})
+</script>
+
 <template>
 
       <v-app-bar class="mobile-nav">
@@ -19,16 +30,6 @@
       </v-navigation-drawer>
         <slot></slot>
 </template>
-<script setup>
-import { ref, watch } from 'vue'
-
-const drawer = ref(false)
-const group = ref(null)
-
-watch(group, () => {
-  drawer.value = false
-})
-</script>
 <style scoped lang="scss">
 @use '../../styles/mixins' as m;
 

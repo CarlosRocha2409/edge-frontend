@@ -4,7 +4,6 @@ import Burns from './Burns.vue'
 import Earnings from './Earnings.vue'
 import BlockDetails from './BlockDetails.vue'
 import Transactions from './Transactions.vue'
-import Stakes from './Stakes.vue'
 </script>
 <template>
     <v-row>
